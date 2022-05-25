@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Title</title>
+    <style>
+        body {
+            background-color: rgb(180, 175, 255);
+            color: white;
+            font: normal 20pt Arial;
+        }
+
+        h1 {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Primeiro paragrafo</p>
+    <script>
+        var number1 = window.prompt('Insert a number: ') // Prompet return a string
+        var number2 = window.prompt('insert other number: ')
+        var plus = parseInt(number1) + parseInt(number2)
+        window.alert('The result of first number plus second number is: ' + plus)
+        /* 
+        We need convert to int first, or the result is the two strings.
+        ex:
+        number1 = 5
+        number 2 = 5
+        The alert show "The result of first number plus second number is: 55" if we don't convert.
+        another way to convert is:
+
+        var number1 = parseInt(window.prompt('Insert a number: ')) // Prompet return a string
+        var number2 = parseInt(window.prompt('insert other number: '))
+
+        I convert  variable plus but, we need be cautful, think about the use, and the best way from your use along of the project
+        */
+    </script>
+</body>
+</html>

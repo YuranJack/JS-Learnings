@@ -21,9 +21,14 @@
     <h1>Olá, mundo!</h1>
     <p>Primeiro paragrafo</p>
     <script>
-        window.alert('My First Alert')
-        window.confirm('Click ok to continue: ')
-        window.prompt('Please, insert your name: ')
+        var number1 = Number(window.prompt('Insert a number: ')) // Prompet return a string
+        var number2 = Number(window.prompt('insert other number: '))
+        var plus = number1 + number2
+        window.alert(`The result of ${number1} plus ${number1} is: ${plus}`)
+        /*
+            Here is the same thing, but i use only Number to convert, so the type of result is automatic.
+            Important: Don't use this, if you need a specific type of number (in this case).
+        */
     </script>
 </body>
 </html>
