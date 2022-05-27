@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You are a Foreing?</title>
+    <style>
+        div#Block{
+            background: rgb(187, 187, 187);
+            position: center;
+            width: 400px;
+            height: 200px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        p#country{
+            color: red;
+            font: bold 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    <div id="Block">
+        <h1>You are a Foreing? lets see</h1>
+        <p><strong>Insert your country:</strong></p>
+        <input type="text" name="countryName" id="countryName">
+        <input type="button" name="insert" value="Verify" onclick="Verify()">
+        
+    </div>
+    <script>
+        function Verify()
+        {
+            var bornCountry = document.getElementById('countryName')
+            var block = document.getElementById('Block')
+            var countryStr = String(bornCountry.value).toUpperCase()
+            if(countryStr == 'USA')
+            {
+                block.innerHTML += '<p id="country">You are not a <strong>Foreing</strong></p1>'
+            }
+            else
+            {
+                block.innerHTML += '<p id="country">You are a <strong>Foreing</strong></p1>'
+            }
+            console.log(bornCountry)
+        }
+    </script>
+</body>
+</html>

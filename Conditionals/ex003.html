@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transit check</title>
+</head>
+<body>
+    <h1>Traffic ticket system</h1>
+    Car velocity <input type="number" name="txtvel" id="txtvel"> m/h
+    <input type="button" value="Check" onclick="Calc()">
+    <div id="Result">
+
+    </div>
+
+    <script>
+        function Calc()
+        {
+            var textVel = document.querySelector('input#txtvel')
+            var result = document.querySelector('div#Result')
+            var velocity = Number(textVel.value)
+
+            result.innerHTML = `<p>Your velocity is <strong>${velocity} m/h</strong></p>`
+            result.innerHTML += '<p>Drive safe!!</p>'
+            if(velocity > 60)
+            {
+                result.innerHTML += '<p>Mucth speed, you got a <strong>traffic ticket!</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First step whith DOM</title>
+    <style>
+        body{
+            background: rgba(46, 46, 255, 0.333);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tryng Dom, in live server</h1>
+    <p>Result</p>
+    <p>Using <strong>DOM</strong> in JavaScript</p>
+    <div class="Content">Click here</div>
+    <script>
+        var body = document.body
+        var p1 = document.getElementsByTagName('p')[1] // Not recomended, just for first test
+        /*
+        var div = document.getElementById('Content')
+        p1.style.color = 'black';
+        document.write(p1.innerHTML)
+        div.style.background = "green"
+        div.innerText = "i'm Waiting ... "
+        document.getElementById('Content').innerText = 'Just a test'
+        */
+        var div =  window.document.querySelector('div.Content') // All divs represented by # and Class by .
+        div.style.background = 'gray'
+    </script>
+</body>
+</html>

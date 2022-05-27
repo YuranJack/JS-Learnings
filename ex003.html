@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Numbers</title>
+    <style>
+        body{
+            font: normal 15pt Arial;
+        }
+        input{
+            font: normal 12pt Arial;
+            width: 100px;
+        }
+        div#Result{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adding numbers by insert values</h1>
+    <input type="number" name="Number1" id="Number1"> +
+    <input type="number" name="Number2" id="Number2">
+    <input type="button" value="Adding" onclick="Adding()">
+    <div id="Result">Result</div>
+
+    <script>
+        function Adding()
+        {
+            var number1 = document.getElementById("Number1")
+            var number2 = document.querySelector("input#Number2")
+            var result = document.getElementById("Result")
+            var valueNumber1 = Number(number1.value)
+            var valueNumber2 = Number(number2.value)
+            var addingNumbers = valueNumber1 + valueNumber2
+
+            result.innerHTML = `<strong>${valueNumber1}</strong> adding whit <strong>${valueNumber2}</strong> result in <strong>${addingNumbers}</strong>`
+        }
+    </script>
+</body>
+</html>
